@@ -57,7 +57,7 @@ const Page = ({ details }) => {
               {details.items.map((blog) => {
                 console.log(blog.title);
                 return (
-                  <a href="mailchimp.com" key={blog.id}>
+                  <a href="https://mailchimp.com" key={blog.id}>
                     <h1>Project name: {blog.name}</h1>
                     <p>Star count: {blog.stargazers_count}</p>
                     <p>Fork count:{blog.forks_count}</p>
