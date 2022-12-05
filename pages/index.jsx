@@ -57,12 +57,12 @@ const Page = ({ details }) => {
               {details.items.map((blog) => {
                 console.log(blog.title);
                 return (
-                  <a href="https://mailchimp.com" key={blog.id}>
+                  <div style={{cursor:"pointer"}} onClick={()=>window.location=(blog.html_url)} key={blog.id}>
                     <h1>Project name: {blog.name}</h1>
                     <p>Star count: {blog.stargazers_count}</p>
                     <p>Fork count:{blog.forks_count}</p>
                     <p> Language: {blog.language}</p>
-                  </a>
+                  </div>
                 );
               })}
             </main>

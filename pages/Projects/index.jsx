@@ -5,6 +5,9 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 const Page = ({ details }) => {
+
+
+
   console.log("san", details);
 
   return (
@@ -57,14 +60,14 @@ const Page = ({ details }) => {
               {details.items.map((blog) => {
                 console.log(blog.title);
                 return (
-                  <a href=" https://mailchimp.com" terget="_blank" key={blog.id}>
+                  <div  key={blog.id} onClick={()=>window.location=(blog.html_url)}>
                     <h1 >
                       Project name: {blog.name}
                     </h1>
                     <p>Star count: {blog.stargazers_count}</p>
                     <p>Fork count:{blog.forks_count}</p>
                     <p> Language: {blog.language}</p>
-                  </a>
+                  </div>
                 );
               })}
             </main>
