@@ -60,7 +60,7 @@ const Page = ({ details }) => {
               {details.items.map((blog) => {
                 console.log(blog.title);
                 return (
-                  <div  key={blog.id} onClick={()=>window.location=(blog.html_url)}>
+                  <div style={{cursor:"pointer"}}  key={blog.id} onClick={()=>window.location=(blog.html_url)}>
                     <h1 >
                       Project name: {blog.name}
                     </h1>
